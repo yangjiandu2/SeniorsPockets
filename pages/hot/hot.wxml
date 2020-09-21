@@ -1,0 +1,22 @@
+<!--pages/hot/hot.wxml-->
+<view class="audio">
+  <view class="head">推荐</view>
+  <!-- <view class="audio_list_group" >
+    <scroll-view class="audio_list_group" scroll-x wx:for="{{dataList}}" wx:key="{{index}}">
+      <view class="list_item" >
+        <image src="{{item.pic_s210}}" class="img"></image>
+        <audio src="http://qukufile2.qianqian.com/data2/pic/b733a1a9fc0f63c7015be29b7b840b66/679224035/679224035.jpg@s_2,w_90,h_90"></audio>
+        <text class="name">{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view> -->
+  <view class="section">
+  <scroll-view class="scroll-view_H" scroll-x >
+    <view class="scroll-view-item_H" wx:for="{{dataList}}" wx:key="{{index}}">
+        <image src="{{item.pic_s210}}" class="img"></image>
+        <!-- <audio src="http://qukufile2.qianqian.com/data2/pic/b733a1a9fc0f63c7015be29b7b840b66/679224035/679224035.jpg@s_2,w_90,h_90"></audio> -->
+        <text class="name">{{item.name}}</text>
+      </view>
+  </scroll-view>
+</view>
+</view>

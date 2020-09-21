@@ -1,0 +1,41 @@
+.category {
+  width: 100%;
+  height: 100%;
+}
+
+.category .group_list {
+  display: flex;
+  justify-content: center;
+  color: #000;
+  /* margin-top: 40rpx; */
+  background:#ededed;
+  width:90%;
+  margin:20rpx auto;
+  border-radius:30rpx;
+  box-shadow: 2rpx 2rpx 10rpx #ccc;
+}
+
+.category .group_list .item {
+  height: auto;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20rpx;
+  padding: 5rpx;
+}
+
+.category .group_list .item .img {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50rpx;
+}
+
+.category .group_list .item .categort_name {
+  font-size: 12px;
+  padding-top: 10rpx;
+  color: red;
+  text-shadow:1px 1px 3px red;
+}

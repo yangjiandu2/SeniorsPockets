@@ -1,0 +1,20 @@
+<view class="category">
+<view class="group_list">
+  <view class="item" bindtap="selectTab" data-id="1">
+    <image class="img" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1308391282,457958535&fm=26&gp=0.jpg"></image>
+    <text class="categort_name">推荐</text>
+  </view>
+  <view class="item" bindtap="selectTab"  data-id="2">
+    <image class="img" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3126050360,880602432&fm=26&gp=0.jpg"></image>
+    <text class="categort_name">热门</text>
+  </view>
+  <view class="item" bindtap="selectTab" data-id="3">
+    <image class="img" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=201041278,1558688962&fm=26&gp=0.jpg"></image>
+    <text class="categort_name">今日</text>
+  </view>
+  <view class="item" bindtap="selectTab" data-id="4">
+    <image class="img" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2640170956,4117696285&fm=15&gp=0.jpg"></image>
+    <text class="categort_name">搞笑</text>
+  </view>
+</view>
+</view>

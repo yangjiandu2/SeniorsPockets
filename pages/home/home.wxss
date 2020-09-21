@@ -1,0 +1,34 @@
+/* pages/home/home.wxss */
+.home{
+  width: 100%;
+  height:100%;
+}
+.home .list_group{
+  height:400rpx;
+  width:100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.home .list_group .group_item{
+  width:48%;
+  background-color: #ededed;
+  height:100%;
+  border-radius:8rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+.home .list_group .group_item image{
+  width: 100%;
+  height:100%;
+  vertical-align: middle;
+ 
+}
+.home .list_group .group_item .time{
+  position: absolute;
+  font-size: 10rpx;
+  color: #333;
+  bottom:10rpx;
+  left:10rpx;
+}

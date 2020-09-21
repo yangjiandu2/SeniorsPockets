@@ -1,0 +1,18 @@
+<view class='container'>
+  <view class='top'>
+    <button class="get_userinfo" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <!-- <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block> -->
+    <view class='user_tab' wx:else>
+      <image src="{{userInfo.avatarUrl || 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1308391282,457958535&fm=26&gp=0.jpg' }}"
+        mode='aspectFill' class='avatar' bindtap='linkTo' data-path='myInfo'></image>
+      <view class='user_name'>{{userInfo.nickName?userInfo.nickName:'未登录'}}</view>
+    </view>
+  </view>
+<view class="set">
+
+  <view class="set_line">待开发中...</view>
+</view>
+</view>

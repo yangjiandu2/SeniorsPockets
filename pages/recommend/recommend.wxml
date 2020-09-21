@@ -1,0 +1,56 @@
+<view class="video_group">
+  <!-- <view class="group_item">
+    <view class="item_title">《孟子》：最人人苏旭的五大命运，感受千古悍马当之气！</view>
+    <view class="item_video_wrap">
+      <video
+        src="https://ugccsy.qq.com/uwMROfz2r57IIaQXGdGnC2dePkY6TBijNmYhp7I7TbAHYM2s/szg_7924_50001_0b6btqac6aaalaaakabjlbpvdhgdf6oaal2a.f622.mp4?sdtfrom=v1105&guid=af297356d2fefdb242a3a0d1e66e1b60&vkey=15B082E0E9AB0AED0B9817012A7D461031AFF88FF710D1E32EA841A27D5550CC425A7F2B47D51D0123BCF070801FCA4224BC287C7C2005151A225D5889717146AD6727E43AA811C2FE200C46E43499F5DC2E78BE825E3F12BEF80AE05A333831C68BBF970EE2E381370419AA9C4A3CD1ADEE367AE38B0C29B1CDC6E344CD2E70"
+        class="video"
+        poster="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2180808491,2954741750&fm=26&gp=0.jpg"></video>
+      <view class="video_but_txt">
+        <text>搞笑 1小时前 · 100阅读</text>
+        <view class="video_duration">02/16</view>
+      </view>
+    </view>
+    <view class="vid_footer">
+      <view class="video_love">
+        <text>3 赞过</text>
+      </view>
+      <view class="video_contorl">
+        <view>评论</view>
+        <view>收藏</view>
+        <view>分享</view>
+      </view>
+    </view>
+  </view> -->
+  <view class="group_item" wx:for="{{dataList}}" wx:key='index' wx:for-item="item">
+    <view class="item_title">{{ item.data.description }}</view>
+    <view class="item_video_wrap">
+      <video
+        src='{{(curIndex == index)? grade : item.data.playUrl}}'
+        controls
+        id="myVideo{{index}}" 
+        data-index='{{index}}'
+        bindplay="play" 
+        class="video"
+        poster='{{item.data.cover.feed}}' ></video>
+      <view class="video_but_txt" wx:if="{{item.data.playInfo.length>0}}">
+        <text bindtap="setDefinition" data-index='{{index}}' data-obj="{{item}}">{{(curIndex == index)?gradName:'标清'}}</text>
+      </view>
+      <view class="definition" wx:if="{{ (curIndex == index && hiddemDefin) }}" bindtap="hidem">
+        <view class="def_list">
+          <text class="def_item" bindtap="handleMass" wx:for-item="son_item" data-obj="{{son_item}}" wx:for="{{item.data.playInfo}}"  wx:key='index'>{{son_item.name}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="vid_footer">
+      <view class="video_love">
+        <text>{{item.data.duration}} 人赞过</text>
+      </view>
+      <view class="video_contorl">
+        <view>评论</view>
+        <view>收藏</view>
+        <view>分享</view>
+      </view>
+    </view>
+  </view>
+</view>

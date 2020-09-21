@@ -1,0 +1,12 @@
+<view class="home"> 
+  <view class="list_group" >
+    <view class="group_item"  wx:for='{{imgList}}'  wx:key='index' >
+      <image src='{{item.img}}' mode='aspectFill' bindtap='priveImg' data-path='{{item.img}}' onerror="imgOnerror" data-idx="{{index}}"> </image>
+      <!-- <text class="time">{{item.time}}</text> -->
+    </view>
+    <!-- <view class="group_item">
+      <image :src="item.img"> </image>
+    </view> -->
+  </view>
+</view>
+
